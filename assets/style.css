@@ -88,7 +88,7 @@ body{
 }
 .features{
     display: grid;
-    place-content: center;
+    align-items: end;
     cursor: pointer;
     position: relative;
     border-radius: 20px;
@@ -99,6 +99,7 @@ body{
     padding: 5px 20px;
     background-color: #EB5353;
     border-radius: 20px 0 20px 0;
+    top: 0;
 }
 .hero .new-product{
     top: 0;
@@ -107,8 +108,13 @@ body{
 .features h2,
 .hero h3{
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 4px black;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 5px 10px;
+    border-radius: 5px;
     text-align: center;
+}
+.features h2{
+    border-radius: 0 0 20px 20px;
 }
 .feature-1{
     grid-area: feature-1;
@@ -164,6 +170,9 @@ body{
     padding: 5px;
     border-radius: 20px;
     margin: 10px 0;
+}
+.service a:hover{
+    background-color: #EB5353;
 }
 
 /* Bagian My product */
