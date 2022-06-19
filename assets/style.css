@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Pallete
+#92B4EC blue muda
+FAF0D7 bg
+EB5353 red
+06283D blue tua
+*/
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Anek Malayalam", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #FAF0D7;
+}
+.container{
+    display: grid;
+}
+
+/* Navigasi */
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.menu .brand{
+    display: grid;
+    align-items: center;
+}
+.menu ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+.menu ul a{
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+.menu ul a:hover{
+    color: rgb(133, 133, 133);
+}
+.menu .login{
+    display: grid;
+    justify-items: end;
+}
+.menu .login-ul{
+    display: none;
+}
+.menu .login a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #92B4EC;
+    padding: 2px 30px;
+    border-radius: 50px;
+}
+.menu .login a:hover{
+    background-color: #FF852C;
+}
+
+/* Header */
+.header{
+    display: grid;
+    grid-template-areas: 
+        'hero hero feature-1'
+        'hero hero feature-2';
+    margin: 50px 100px;
+    gap: 10px;
+    min-height: 500px;
+}
+.hero{
+    grid-area: hero;
+    background-image: url(hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-content: end;
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+}
+.features{
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+}
+.new-product{
+    position: absolute;
+    color: #fff;
+    padding: 5px 20px;
+    background-color: #EB5353;
+    border-radius: 20px 0 20px 0;
+}
+.hero .new-product{
+    top: 0;
+    background-color: #e61b1b;
+}
+.features h2,
+.hero h3{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 4px black;
+    text-align: center;
+}
+.feature-1{
+    grid-area: feature-1;
+    background-image: url(tshirt1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.feature-2{
+    grid-area: feature-2;
+    background-image: url(tshirt2.jpg);
+    background-size: cover;
+}
+
+/* Services */
+.services{
+    margin-top: 50px;
+    padding: 0 100px;
+    background-color: #06283D;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+}
+.service{
+    background-color: #ddd;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    position: relative;
+    top: -65px;
+}
+.service .s-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+.service h3{
+    color: rgb(26, 26, 26);
+}
+.service p{
+    text-align: center;
+    color: rgb(66, 66, 66);
+    line-height: 20px;
+}
+.service a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background-color: #92B4EC;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+/* Bagian My product */
+.my-product{
+    background-color: #06283D;
+    padding: 25px 100px;
+    padding-bottom: 50px;
+}
+.my-product h2{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+.my-product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.prdc{
+    background-color: #ddd;
+    display: grid;
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 20px;
+}
+.p-img img{
+    width: 100%;
+    border-radius: 20px;
+}
+.prdc a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background-color: #EB5353;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+/* Bagian About */
+.about{
+    display: grid;
+    padding: 50px 100px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 20px;
+}
+.about-content h2{
+    font-size: 50px;
+}
+.about-content img{
+    width: 100%;
+    max-height: auto;
+}
+
+/* Bagian Gallery */
+.gallery{
+    display: grid;
+    padding: 0 100px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.gallery h2{
+    grid-column: 1 / -1;
+    font-size: 50px;
+    text-align: center;
+}
+.gallery img{
+    width: 100%;
+    max-height: auto;
+}
+
+/* Bagian Contact */
+.contact{
+    display: grid;
+    padding: 0 100px;
+    justify-items: center;
+}
+.contact h2{
+    font-size: 50px;
+    text-align: center
+}
+.contact input,
+.contact textarea{
+    width: 50%;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #06283D;
+}
+.contact button{
+    width: 53%;
+    padding: 8px 15px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: #EB5353;
+}
+.contact button:hover{
+    background-color: #92B4EC;
+}
+
+/* Footer */
+footer{
+    background-color: #06283D;
+    padding: 50px 100px 25px 100px;
+}
+footer .footer-top{
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-between;
+    color: #fff;
+}
+.footer-item{
+    margin-bottom: 20px;
+}
+footer .footer-top .info-footer{
+    text-align: center;
+}
+footer .footer-top li{
+    color: rgb(180, 180, 180);
+    list-style-type: none;
+}
+footer .footer-top p{
+    text-align: justify;
+    color: rgb(180, 180, 180);
+}
+footer .footer-bottom{
+    display: grid;
+    justify-content: center;
+}
+footer .footer-bottom .bi{
+    font-size: 30px;
+    color: #fff;
+    margin-left: 10px;
+}
+.end{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 100px;
+}
+.end p{
+    text-align: center;
+}
+.end p span{
+    color: #e61b1b;
+    position: relative;
+    top: 2px;
+}
+
+/* Menu toggle hamburger */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    opacity: 0;
+    z-index: 2;
+    top: -5px;
+    left: -3px;
+    cursor: pointer;
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all 0.5s;
+    background-color: #000;
+}
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 0;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: #fff;
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+    background-color: #fff;
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .menu,
+    .services,
+    .my-product,
+    .about,
+    .gallery,
+    .contact,
+    footer{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .header{
+        grid-template-areas: 
+        'hero'
+        'feature-1'
+        'feature-2';
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .menu{
+        grid-template-columns: 1fr 1fr;
+        justify-items: end;
+    }
+    .menu .brand{
+        justify-self: start;
+    }
+    .menu-toggle{
+        display: flex;
+    }
+    .menu .login{
+        display: none;
+    }
+    .menu .login-ul{
+        display: block;
+    }
+    .menu ul{
+        display: flex;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .9);
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 1;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    .menu li a{
+        color: #fff;
+        font-size: 30px;
+    }
+    .menu ul.slide{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
