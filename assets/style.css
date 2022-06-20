@@ -439,4 +439,7 @@ footer .footer-bottom .bi{
         transform: translateY(0);
         opacity: 1;
     }
+    .about{
+        grid-template-columns: 1fr;
+    }
 }
