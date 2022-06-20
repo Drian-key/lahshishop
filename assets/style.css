@@ -268,9 +268,9 @@ body{
     margin-bottom: 10px;
     border-radius: 20px;
     border: 1px solid #06283D;
+    box-sizing: border-box;
 }
 .contact button{
-    width: 53%;
     padding: 8px 15px;
     margin-bottom: 50px;
     border-radius: 20px;
@@ -449,5 +449,8 @@ footer .footer-bottom .bi{
         margin-bottom: 10px;
         border-radius: 20px;
         border: 1px solid #06283D;
+    }
+    .contact button{
+        width: 100%;
     }
 }
