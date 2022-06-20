@@ -442,4 +442,12 @@ footer .footer-bottom .bi{
     .about{
         grid-template-columns: 1fr;
     }
+    .contact input,
+    .contact textarea{
+        width: 100%;
+        padding: 8px 15px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        border: 1px solid #06283D;
+    }
 }
